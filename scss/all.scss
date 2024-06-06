@@ -1,0 +1,422 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+body{
+    font-family: "Noto Sans TC", sans-serif;
+    line-height: 1.5;
+}
+
+.work{
+    max-width: 1920px;
+    margin: 0 auto;
+    .header{
+        display: flex;
+        align-items: center;
+        padding: 32px 312px;
+        border-bottom: 1px solid #F1F1F1;
+        .logo{
+            margin-right: 318px;
+        }
+        .menu-control{
+            display: none;
+            &:checked+.menu-btn{
+                .menu-open{
+                    display: none;
+                }
+                .menu-close {
+                    display: inline;
+                }
+            }
+            &:not(:checked)+.menu-btn{
+                .menu-open{
+                    display: inline;
+                }
+                .menu-close {
+                    display: none;
+                }
+            }
+        }
+        .menu-btn {
+            display: none;
+            cursor: pointer;
+            height: 40px;
+            width: 40px;
+            padding: 10px 5px;
+        }
+        .menu{
+            display: flex;
+            column-gap: 40px;
+            a{
+                display: flex;
+                color: #000;
+                text-decoration: none;
+                padding: 4px 8px;
+                white-space: nowrap;
+                position: relative;
+                &:hover{
+                    &::before, &::after{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        width: 8px;
+                        height: 8px;
+                        border-top: 1px solid #919191;
+                        -webkit-box-reflect: below 16px;
+                    }
+                    &::before{
+                        left: 0;
+                        border-left: 1px solid #919191;
+                    }
+                    &::after{
+                        right: 0;
+                        border-right: 1px solid #919191;
+                    }
+                }
+    
+            }
+        }
+    }
+    .title{
+        background: #FAFAFA;
+        padding: 80px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 24px;
+        z-index: 0;
+        .slogan{
+            max-width: 670px;
+            height: 192px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 16px;
+            position: relative;
+            h2{
+                font-size: 24px;
+                color: #1E1E1E;
+                line-height: 1.2;
+                text-align: center;
+                z-index: 1;
+                .marked{
+                    position: relative;
+                }
+                .marked::after{
+                    position: absolute;
+                    content: '';
+                    width: 148px;
+                    height: 8px;
+                    left: -15px;
+                    bottom: 0;
+                    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true);
+                    z-index: -1;
+                }
+            }
+            &::before, &::after{
+                position: absolute;
+                content: '';
+                width: 72px;
+                height: 72px;
+            }
+            &::before{
+                top: -10px;
+                left: -72px;
+                background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/quote-left.png?raw=true);
+            }
+            &::after{
+                bottom: -10px;
+                right: -72px;
+                background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/quote-right.png?raw=true);
+            }
+            .mobile-br{
+                display: none;
+            }
+        }
+        .experience{
+            display: flex;
+            text-align: center;
+            column-gap: 40px;
+            .experience-ex{
+                width: 298px;
+                h3{
+                    color: #5B5B5B;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 8px;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        width: 24px;
+                        height: 4px;
+                        border-bottom: 2px solid #C1C1C1;
+                        bottom: 0;
+                        
+                    }
+                }
+                p{
+                    color: #3B3B3B;
+                }
+            }
+        }
+    }
+    .content{
+        padding: 120px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 72px;
+        .content-items{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 80px;
+            column-gap: 24px;
+            max-width: 1296px;
+            img{
+                margin-bottom: 16px;
+                border-radius: 8px;
+                display: block;
+                outline: 1px solid #F1F1F1;
+            }
+            .text{
+                padding: 0px 16px;
+                color: #3B3B3B;
+                h2{
+                    font-size: 28px;
+                    font-weight: 700;
+                    line-height: 1.2;
+                    margin-bottom: 8px;
+                }
+                p{
+                    color: #919191;
+                    margin-bottom: 24px;
+                }
+                .tags{
+                    display: flex;
+                    gap: 16px;
+                    li{
+                        background: #F1F1F1;
+                        border-radius: 16px;
+                        padding: 4px 12px;
+                    }
+                }
+            }
+        }
+        .pagination{
+            display: flex;
+            justify-content: space-between;
+            column-gap: 16px;
+            a{
+                display: block;
+                padding: 2px 13px;
+                color: #3B3B3B;
+                font-size: 24px;
+                text-decoration: none;
+                border-radius: 4px;
+                &:hover{
+                    color: #FFF;
+                    background: #1E1E1E;
+                }
+            }
+            .current{
+                color: #FFF;
+                background: #1E1E1E;
+            }
+        }
+    }
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true);
+        padding: 80px 312px;
+        border-top: 1px solid #FAFAFA;
+        .contact{
+            display: flex;
+            flex-direction: column;
+            row-gap: 24px;
+            .logo{
+                width: 120px;
+            }
+            p{
+                font-size: 20px;
+                color: #3B3B3B;
+            }
+            .email{
+                color: #919191;
+                line-height: 1.2;
+            }
+        }
+        .button{
+            display: flex;
+            flex-direction: column;
+            row-gap: 24px;
+            a{
+                display: flex;
+                align-items: center;
+                column-gap: 8px;
+                width: 306px;
+                background: #FFF;
+                padding: 8px 24px;
+                border-radius: 8px;
+                border: 1px solid #C1C1C1;
+                text-decoration: none;
+                font-size: 20px;
+                color: #3B3B3B;
+                &:hover{
+                    color: #FFF;
+                    background: #3B3B3B;
+                }
+            }
+            .form{
+                background: #000;
+                color: #FFF;
+            }
+        }
+    }
+    @media(max-width:1295px){
+        .header{
+          padding-left: 12px;
+          padding-right: 12px;
+        }
+      .footer{
+          padding-left: 12px;
+          padding-right: 12px;
+      }
+    }
+    @media (max-width: 992px){
+        .header{
+            padding: 8px 12px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .logo{
+                margin-right: 0;
+            }
+            .menu-btn{
+                display: block;
+                
+            }
+            .menu{
+                display: none;
+            }
+            .menu-control:checked~.menu{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                row-gap: 24px;
+                padding: 40px 0;
+            }  
+        }
+        .title{
+            padding: 40px 24px;
+            row-gap: 40px;
+            .slogan{
+                padding-top: 64px;
+                &::before{
+                    width: 64px;
+                    height: 64px;
+                    left: 118px;
+                }
+                &::after{
+                    display: none;
+                }
+                h2{
+                    font-size: 20px;
+                    line-height: 1.5;
+                    .marked::after{
+                        width: 108px;
+                        height: 6px;
+                        background-size: 108px 6px;
+                        left: -3px;
+                    }
+                }
+                .mobile-br{
+                    display: block; 
+                }
+            }
+            .experience{
+                flex-direction: column;
+                row-gap: 20px;
+            }
+        }
+        .content{
+            padding: 80px 0;
+            .content-items{
+                .text{
+                    h2{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        .footer{
+            flex-direction: column;
+            padding: 40px 12px;
+            row-gap: 40px;
+            background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-sm.png?raw=true);
+            background-size: cover;
+            .contact{
+                align-items: center;
+            }
+        }
+    }
+}

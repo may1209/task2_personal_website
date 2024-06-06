@@ -1,0 +1,510 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  line-height: 1.5;
+}
+
+.work {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.work .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 32px 312px;
+  border-bottom: 1px solid #F1F1F1;
+}
+.work .header .logo {
+  margin-right: 318px;
+}
+.work .header .menu-control {
+  display: none;
+}
+.work .header .menu-control:checked + .menu-btn .menu-open {
+  display: none;
+}
+.work .header .menu-control:checked + .menu-btn .menu-close {
+  display: inline;
+}
+.work .header .menu-control:not(:checked) + .menu-btn .menu-open {
+  display: inline;
+}
+.work .header .menu-control:not(:checked) + .menu-btn .menu-close {
+  display: none;
+}
+.work .header .menu-btn {
+  display: none;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  padding: 10px 5px;
+}
+.work .header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+}
+.work .header .menu a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #000;
+  text-decoration: none;
+  padding: 4px 8px;
+  white-space: nowrap;
+  position: relative;
+}
+.work .header .menu a:hover::before, .work .header .menu a:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid #919191;
+  -webkit-box-reflect: below 16px;
+}
+.work .header .menu a:hover::before {
+  left: 0;
+  border-left: 1px solid #919191;
+}
+.work .header .menu a:hover::after {
+  right: 0;
+  border-right: 1px solid #919191;
+}
+.work .title {
+  background: #FAFAFA;
+  padding: 80px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 24px;
+  z-index: 0;
+}
+.work .title .slogan {
+  max-width: 670px;
+  height: 192px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 16px;
+  position: relative;
+}
+.work .title .slogan h2 {
+  font-size: 24px;
+  color: #1E1E1E;
+  line-height: 1.2;
+  text-align: center;
+  z-index: 1;
+}
+.work .title .slogan h2 .marked {
+  position: relative;
+}
+.work .title .slogan h2 .marked::after {
+  position: absolute;
+  content: "";
+  width: 148px;
+  height: 8px;
+  left: -15px;
+  bottom: 0;
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true);
+  z-index: -1;
+}
+.work .title .slogan::before, .work .title .slogan::after {
+  position: absolute;
+  content: "";
+  width: 72px;
+  height: 72px;
+}
+.work .title .slogan::before {
+  top: -10px;
+  left: -72px;
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/quote-left.png?raw=true);
+}
+.work .title .slogan::after {
+  bottom: -10px;
+  right: -72px;
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/quote-right.png?raw=true);
+}
+.work .title .slogan .mobile-br {
+  display: none;
+}
+.work .title .experience {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+}
+.work .title .experience .experience-ex {
+  width: 298px;
+}
+.work .title .experience .experience-ex h3 {
+  color: #5B5B5B;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 8px;
+}
+.work .title .experience .experience-ex h3::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 4px;
+  border-bottom: 2px solid #C1C1C1;
+  bottom: 0;
+}
+.work .title .experience .experience-ex p {
+  color: #3B3B3B;
+}
+.work .content {
+  padding: 120px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 72px;
+}
+.work .content .content-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 80px;
+  -webkit-column-gap: 24px;
+     -moz-column-gap: 24px;
+          column-gap: 24px;
+  max-width: 1296px;
+}
+.work .content .content-items img {
+  margin-bottom: 16px;
+  border-radius: 8px;
+  display: block;
+  outline: 1px solid #F1F1F1;
+}
+.work .content .content-items .text {
+  padding: 0px 16px;
+  color: #3B3B3B;
+}
+.work .content .content-items .text h2 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.work .content .content-items .text p {
+  color: #919191;
+  margin-bottom: 24px;
+}
+.work .content .content-items .text .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+.work .content .content-items .text .tags li {
+  background: #F1F1F1;
+  border-radius: 16px;
+  padding: 4px 12px;
+}
+.work .content .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 16px;
+     -moz-column-gap: 16px;
+          column-gap: 16px;
+}
+.work .content .pagination a {
+  display: block;
+  padding: 2px 13px;
+  color: #3B3B3B;
+  font-size: 24px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.work .content .pagination a:hover {
+  color: #FFF;
+  background: #1E1E1E;
+}
+.work .content .pagination .current {
+  color: #FFF;
+  background: #1E1E1E;
+}
+.work .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true);
+  padding: 80px 312px;
+  border-top: 1px solid #FAFAFA;
+}
+.work .footer .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 24px;
+}
+.work .footer .contact .logo {
+  width: 120px;
+}
+.work .footer .contact p {
+  font-size: 20px;
+  color: #3B3B3B;
+}
+.work .footer .contact .email {
+  color: #919191;
+  line-height: 1.2;
+}
+.work .footer .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 24px;
+}
+.work .footer .button a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 8px;
+     -moz-column-gap: 8px;
+          column-gap: 8px;
+  width: 306px;
+  background: #FFF;
+  padding: 8px 24px;
+  border-radius: 8px;
+  border: 1px solid #C1C1C1;
+  text-decoration: none;
+  font-size: 20px;
+  color: #3B3B3B;
+}
+.work .footer .button a:hover {
+  color: #FFF;
+  background: #3B3B3B;
+}
+.work .footer .button .form {
+  background: #000;
+  color: #FFF;
+}
+@media (max-width: 1295px) {
+  .work .header {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .work .footer {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+@media (max-width: 992px) {
+  .work .header {
+    padding: 8px 12px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .work .header .logo {
+    margin-right: 0;
+  }
+  .work .header .menu-btn {
+    display: block;
+  }
+  .work .header .menu {
+    display: none;
+  }
+  .work .header .menu-control:checked ~ .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    row-gap: 24px;
+    padding: 40px 0;
+  }
+  .work .title {
+    padding: 40px 24px;
+    row-gap: 40px;
+  }
+  .work .title .slogan {
+    padding-top: 64px;
+  }
+  .work .title .slogan::before {
+    width: 64px;
+    height: 64px;
+    left: 118px;
+  }
+  .work .title .slogan::after {
+    display: none;
+  }
+  .work .title .slogan h2 {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  .work .title .slogan h2 .marked::after {
+    width: 108px;
+    height: 6px;
+    background-size: 108px 6px;
+    left: -3px;
+  }
+  .work .title .slogan .mobile-br {
+    display: block;
+  }
+  .work .title .experience {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 20px;
+  }
+  .work .content {
+    padding: 80px 0;
+  }
+  .work .content .content-items .text h2 {
+    font-size: 20px;
+  }
+  .work .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 40px 12px;
+    row-gap: 40px;
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-sm.png?raw=true);
+    background-size: cover;
+  }
+  .work .footer .contact {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
