@@ -1,0 +1,78 @@
+@mixin box-corner{
+    &::before, &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 8px;
+        height: 8px;
+        border-top: 1px solid $color-light-gray;
+        -webkit-box-reflect: below 16px;
+    }
+    &::before{
+        left: 0;
+        border-left: 1px solid $color-light-gray;
+    }
+    &::after{
+        right: 0;
+        border-right: 1px solid $color-light-gray;
+    }
+}
+
+@mixin title-text{
+    text-align: center;
+    font-weight: $font-weight-semi-bold;
+    font-size: $font-size-xl;
+    color: $color-darker-gray;
+    line-height: $line-height-snug;
+    letter-spacing: .12rem;
+    position: relative;
+    &::before, &::after{
+        content: '';
+        position: absolute;
+        top: 16.5px;
+        width: 100px;
+        height: 6px;
+    }
+    &::before{
+        left: -65%;
+        background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/title-deco-left-lg.png?raw=true);
+    }
+    &::after{
+        right: -65%;
+        background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/title-deco-right-lg.png?raw=true);
+    }
+    @media (max-width: 992px){
+        font-size: $font-size-m;
+        font-weight: bold;
+        &::before, &::after{
+            top: 9px;
+            width: 56px;
+        }
+        &::before{
+            left: -25%;
+            background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/title-deco-left-sm.png?raw=true);
+        }
+        &::after{
+            right: -25%;
+            background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/title-deco-right-sm.png?raw=true);
+        }
+    }
+}
+
+@mixin fs-5{
+    font-size: $font-size-s;
+    color: $color-dark-gray;
+}
+
+@mixin article-img{
+    border-radius: 8px;
+    border: 1px solid $color-lightest-gray;
+    display: block;
+}
+
+@mixin tag{
+    background: $color-lightest-gray;
+    border-radius: 16px;
+    padding: 4px 12px;
+    color: $color-darker-gray;
+}

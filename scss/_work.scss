@@ -1,0 +1,183 @@
+.work{
+    .title{
+        background: $color-lighter-gray;
+        padding: 80px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 24px;
+        z-index: 0;
+        .slogan{
+            max-width: 670px;
+            height: 192px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 16px;
+            position: relative;
+            h2{
+                font-size: $font-size-m;
+                color: $color-darkest-gray;
+                line-height: $line-height-snug;
+                text-align: center;
+                z-index: 1;
+                .marked{
+                    position: relative;
+                }
+                .marked::after{
+                    position: absolute;
+                    content: '';
+                    width: 148px;
+                    height: 8px;
+                    left: -15px;
+                    bottom: 0;
+                    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true);
+                    z-index: -1;
+                }
+            }
+            &::before, &::after{
+                position: absolute;
+                content: '';
+                width: 72px;
+                height: 72px;
+            }
+            &::before{
+                top: -10px;
+                left: -72px;
+                background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/quote-left.png?raw=true);
+            }
+            &::after{
+                bottom: -10px;
+                right: -72px;
+                background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/quote-right.png?raw=true);
+            }
+            .mobile-br{
+                display: none;
+            }
+        }
+        .experience{
+            display: flex;
+            text-align: center;
+            column-gap: 40px;
+            .experience-ex{
+                width: 298px;
+                h3{
+                    color: $color-dark-gray;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 8px;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        width: 24px;
+                        height: 4px;
+                        border-bottom: 2px solid #C1C1C1;
+                        bottom: 0;
+                    }
+                }
+                p{
+                    color: $color-darker-gray;
+                }
+            }
+        }
+        @media (max-width: 992px){
+            padding: 40px 24px;
+            row-gap: 40px;
+            .slogan{
+                padding-top: 64px;
+                &::before{
+                    width: 64px;
+                    height: 64px;
+                    left: 118px;
+                }
+                &::after{
+                    display: none;
+                }
+                h2{
+                    font-size: $font-size-s;
+                    .marked::after{
+                        width: 108px;
+                        height: 6px;
+                        background-size: 108px 6px;
+                        left: -3px;
+                    }
+                }
+                .mobile-br{
+                    display: block; 
+                }
+            }
+            .experience{
+                flex-direction: column;
+                row-gap: 20px;
+            }
+        }
+    }
+    .content{
+        row-gap: 72px;
+        .content-items{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 80px;
+            column-gap: 24px;
+            img{
+                @include article-img;
+                margin-bottom: 16px;
+            }
+            .text{
+                padding: 0px 16px;
+                color: $color-darker-gray;
+                h2{
+                    font-size: $font-size-l;
+                    font-weight: bold;
+                    line-height: $line-height-snug;
+                    margin-bottom: 8px;
+                }
+                p{
+                    color: $color-light-gray;
+                    margin-bottom: 24px;
+                }
+                .tags{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 16px;
+                    li{
+                        @include tag;
+                    }
+                }
+            }
+        }
+        .pagination{
+            display: flex;
+            justify-content: center;
+            column-gap: 16px;
+            a{
+                display: block;
+                padding: 2px 13px;
+                color: $color-darker-gray;
+                font-size: $font-size-m;
+                border-radius: 4px;
+                &:hover{
+                    color: #FFF;
+                    background: $color-darkest-gray;
+                }
+            }
+            .current{
+                color: #FFF;
+                background: $color-darkest-gray;
+            }
+        }
+        @media (max-width: 992px){
+            padding: 80px 0;
+            .content-items{
+                .text{
+                    h2{
+                        font-size: $font-size-s;
+                    }
+                }
+            }
+        }
+    }
+}
