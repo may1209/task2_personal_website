@@ -19,7 +19,6 @@
             h2{
                 font-size: $font-size-m;
                 color: $color-darkest-gray;
-                line-height: $line-height-snug;
                 text-align: center;
                 z-index: 1;
                 .marked{
@@ -56,13 +55,16 @@
                 display: none;
             }
         }
-        .experience{
+        .experience-block{
             display: flex;
             text-align: center;
             column-gap: 40px;
             .experience-ex{
                 width: 298px;
-                h3{
+                p{
+                    color: $color-darker-gray;
+                }
+                .experience{
                     color: $color-dark-gray;
                     position: relative;
                     display: flex;
@@ -76,9 +78,6 @@
                         border-bottom: 2px solid #C1C1C1;
                         bottom: 0;
                     }
-                }
-                p{
-                    color: $color-darker-gray;
                 }
             }
         }
@@ -108,7 +107,7 @@
                     display: block; 
                 }
             }
-            .experience{
+            .experience-block{
                 flex-direction: column;
                 row-gap: 20px;
             }
@@ -132,11 +131,10 @@
                 h2{
                     font-size: $font-size-l;
                     font-weight: bold;
-                    line-height: $line-height-snug;
                     margin-bottom: 8px;
                 }
                 p{
-                    color: $color-light-gray;
+                    color: $color-gray;
                     margin-bottom: 24px;
                 }
                 .tags{

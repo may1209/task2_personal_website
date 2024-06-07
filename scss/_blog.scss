@@ -8,40 +8,45 @@
                 margin-bottom: 24px;
             }
             p{
-                color: $color-light-gray;
+                color: $color-gray;
             }
         }
-        .content-items{
-            display: flex;
-            flex-direction: column;
-            row-gap: 64px;
-            .article{
-                max-width: 966px;
+        .blog-page{
+            justify-content: center;
+            column-gap: 24px;
+            .content-items{
                 display: flex;
-                column-gap: 16px;
-                img{
-                    @include article-img;
-                }
-                .text{
-                    .detail{
+                flex-direction: column;
+                row-gap: 64px;
+                .article{
+                    max-width: 966px;
+                    a{
                         display: flex;
-                        align-items: center;
-                        flex-wrap: wrap;
                         column-gap: 16px;
-                        margin-bottom: 16px;
-                        .tags{
-                            @include tag;
+                        img{
+                            @include article-img;
                         }
-                    }
-                    h2{
-                        color: $color-darker-gray;
-                        font-size: $font-size-s;
-                        line-height: $line-height-snug;
-                        font-weight: $font-weight-semi-bold;
-                        margin-bottom: 16px;
-                    }
-                    p{
-                        color: $color-darker-gray
+                        .text{
+                            .detail{
+                                display: flex;
+                                align-items: center;
+                                flex-wrap: wrap;
+                                column-gap: 16px;
+                                margin-bottom: 16px;
+                                .tags{
+                                    @include tag;
+                                }
+                            }
+                            h2{
+                                color: $color-darker-gray;
+                                font-size: $font-size-s;
+                                font-weight: $font-weight-semi-bold;
+                                margin-bottom: 16px;
+                            }
+                            p{
+                                color: $color-darker-gray
+                            }
+                        }
                     }
                 }
             }
@@ -53,13 +58,13 @@
                 }
             }
             .blog-page{
-                flex-direction: column;
-                align-items: center;
-                row-gap: 40px;
                 column-gap: 0;
+                .sidebar{
+                    margin-bottom: 40px;
+                }
                 .content-items{
                     width: 81%;
-                    .article{
+                    a{
                         flex-direction: column;
                         row-gap: 16px;
                         .text{

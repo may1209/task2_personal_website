@@ -5,16 +5,16 @@
         top: 0;
         width: 8px;
         height: 8px;
-        border-top: 1px solid $color-light-gray;
+        border-top: 1px solid $color-gray;
         -webkit-box-reflect: below 16px;
     }
     &::before{
         left: 0;
-        border-left: 1px solid $color-light-gray;
+        border-left: 1px solid $color-gray;
     }
     &::after{
         right: 0;
-        border-right: 1px solid $color-light-gray;
+        border-right: 1px solid $color-gray;
     }
 }
 
@@ -57,11 +57,6 @@
             background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/title-deco-right-sm.png?raw=true);
         }
     }
-}
-
-@mixin fs-5{
-    font-size: $font-size-s;
-    color: $color-dark-gray;
 }
 
 @mixin article-img{
