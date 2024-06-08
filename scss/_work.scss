@@ -1,6 +1,6 @@
 .work{
     .title{
-        background: $color-lighter-gray;
+        background: $primary-100;
         padding: 80px 0;
         display: flex;
         flex-direction: column;
@@ -18,7 +18,7 @@
             position: relative;
             h2{
                 font-size: $font-size-m;
-                color: $color-darkest-gray;
+                color: $primary-800;
                 text-align: center;
                 z-index: 1;
                 .marked{
@@ -62,10 +62,10 @@
             .experience-ex{
                 width: 298px;
                 p{
-                    color: $color-darker-gray;
+                    color: $primary-700;
                 }
                 .experience{
-                    color: $color-dark-gray;
+                    color: $primary-600;
                     position: relative;
                     display: flex;
                     justify-content: center;
@@ -115,38 +115,6 @@
     }
     .content{
         row-gap: 72px;
-        .content-items{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            row-gap: 80px;
-            column-gap: 24px;
-            img{
-                @include article-img;
-                margin-bottom: 16px;
-            }
-            .text{
-                padding: 0px 16px;
-                color: $color-darker-gray;
-                h2{
-                    font-size: $font-size-l;
-                    font-weight: bold;
-                    margin-bottom: 8px;
-                }
-                p{
-                    color: $color-gray;
-                    margin-bottom: 24px;
-                }
-                .tags{
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 16px;
-                    li{
-                        @include tag;
-                    }
-                }
-            }
-        }
         .pagination{
             display: flex;
             justify-content: center;
@@ -154,28 +122,21 @@
             a{
                 display: block;
                 padding: 2px 13px;
-                color: $color-darker-gray;
+                color: $primary-700;
                 font-size: $font-size-m;
                 border-radius: 4px;
                 &:hover{
-                    color: #FFF;
-                    background: $color-darkest-gray;
+                    color: $primary-50;
+                    background: $primary-800;
                 }
             }
             .current{
-                color: #FFF;
-                background: $color-darkest-gray;
+                color: $primary-50;
+                background: $primary-800;
             }
         }
         @media (max-width: 992px){
             padding: 80px 0;
-            .content-items{
-                .text{
-                    h2{
-                        font-size: $font-size-s;
-                    }
-                }
-            }
         }
     }
 }

@@ -5,55 +5,55 @@
         top: 0;
         width: 8px;
         height: 8px;
-        border-top: 1px solid $color-gray;
+        border-top: 1px solid $primary-500;
         -webkit-box-reflect: below 16px;
     }
     &::before{
         left: 0;
-        border-left: 1px solid $color-gray;
+        border-left: 1px solid $primary-500;
     }
     &::after{
         right: 0;
-        border-right: 1px solid $color-gray;
+        border-right: 1px solid $primary-500;
     }
 }
 
-@mixin title-text{
-    text-align: center;
+@mixin title-text-style{
+    display: inline-block;
     font-weight: $font-weight-semi-bold;
     font-size: $font-size-xl;
-    color: $color-darker-gray;
+    color: $primary-700;
     line-height: $line-height-snug;
     letter-spacing: .12rem;
     position: relative;
     &::before, &::after{
         content: '';
         position: absolute;
-        top: 16.5px;
+        top: 16.2px;
         width: 100px;
         height: 6px;
     }
     &::before{
-        left: -65%;
+        left: -116px;
         background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/title-deco-left-lg.png?raw=true);
     }
     &::after{
-        right: -65%;
+        right: -116px;
         background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/title-deco-right-lg.png?raw=true);
     }
     @media (max-width: 992px){
         font-size: $font-size-m;
         font-weight: bold;
         &::before, &::after{
-            top: 9px;
+            top: 11.4px;
             width: 56px;
         }
         &::before{
-            left: -25%;
+            left: -72px;
             background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/title-deco-left-sm.png?raw=true);
         }
         &::after{
-            right: -25%;
+            right: -72px;
             background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/title-deco-right-sm.png?raw=true);
         }
     }
@@ -61,13 +61,28 @@
 
 @mixin article-img{
     border-radius: 8px;
-    border: 1px solid $color-lightest-gray;
+    border: 1px solid $primary-200;
     display: block;
 }
 
 @mixin tag{
-    background: $color-lightest-gray;
+    background: $primary-200;
     border-radius: 16px;
     padding: 4px 12px;
-    color: $color-darker-gray;
+    color: $primary-700;
+}
+
+@mixin service-container{
+    padding: 120px 0;
+    text-align: center;
+    .title-text{
+        @include title-text-style;
+        margin-bottom: 80px;
+    }
+    @media (max-width: 992px){
+        padding: 80px 0;
+        .title-text{
+            margin-bottom: 40px;
+        }
+    }
 }

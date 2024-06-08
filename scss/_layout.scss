@@ -4,7 +4,7 @@
         display: flex;
         align-items: center;
         padding: 32px 312px;
-        border-bottom: 1px solid $color-lightest-gray;
+        border-bottom: 1px solid $primary-200;
         .logo{
             margin-right: 318px;
         }
@@ -32,14 +32,15 @@
             cursor: pointer;
             height: 40px;
             width: 40px;
-            padding: 10px 5px;
+            padding: 8px;
+            color: $primary-900;
         }
         .menu{
             display: flex;
             column-gap: 40px;
             a{
                 display: flex;
-                color: #000;
+                color: $primary-900;
                 padding: 4px 8px;
                 white-space: nowrap;
                 position: relative;
@@ -52,7 +53,7 @@
                 @include box-corner;
             }
         }
-        @media(max-width:1295px){
+        @media(max-width: 1295px){
             padding-left: 12px;
             padding-right: 12px;
         }
@@ -85,12 +86,51 @@
         display: flex;
         flex-direction: column;
     }
+    .work-page{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 80px;
+        column-gap: 24px;
+        img{
+            @include article-img;
+            margin-bottom: 16px;
+        }
+        .text{
+            padding: 0px 16px;
+            color: $primary-700;
+            h2{
+                font-size: $font-size-l;
+                font-weight: bold;
+                margin-bottom: 8px;
+            }
+            p{
+                color: $primary-500;
+                margin-bottom: 24px;
+            }
+            .tags{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
+                li{
+                    @include tag;
+                }
+            }
+        }
+        @media (max-width: 992px){
+            .text{
+                h2{
+                    font-size: $font-size-s;
+                }
+            }
+        }
+    }
     .blog-page{
         display: flex;
         flex-direction: row-reverse;
         .sidebar{
             width: 306px;
-            background: $color-lighter-gray;
+            background: $primary-100;
             padding: 80px;
             border-radius: 8px;
             ul{
@@ -100,16 +140,16 @@
                 white-space: nowrap;
                 a{
                     font-size: $font-size-s;
-                    color: $color-dark-gray;
+                    color: $primary-600;
                     display: inline-block;
                     &:hover{
-                        color: $color-darkest-gray;
-                        border-bottom: 2px solid $color-darkest-gray;
+                        color: $primary-800;
+                        border-bottom: 2px solid $primary-800;
                     }
                 }
                 .current-page{
-                    color: $color-darkest-gray;
-                    border-bottom: 2px solid $color-darkest-gray;
+                    color: $primary-800;
+                    border-bottom: 2px solid $primary-800;
                 }
             }
         }
@@ -141,7 +181,7 @@
         align-items: center;
         background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true);
         padding: 80px 312px;
-        border-top: 1px solid $color-lighter-gray;
+        border-top: 1px solid $primary-100;
         .contact{
             display: flex;
             flex-direction: column;
@@ -151,10 +191,10 @@
             }
             p{
                 font-size: $font-size-s;
-                color: $color-darker-gray;
+                color: $primary-700;
             }
             .email{
-                color: $color-gray;
+                color: $primary-500;
                 line-height: $line-height-snug;
             }
         }
@@ -167,23 +207,23 @@
                 align-items: center;
                 column-gap: 8px;
                 max-width: 306px;
-                background: #FFF;
+                background: $primary-50;
                 padding: 8px 24px;
                 border-radius: 8px;
-                border: 1px solid $color-light-gray;
+                border: 1px solid $primary-400;
                 font-size: $font-size-s;
-                color: $color-darker-gray;
+                color: $primary-700;
                 &:hover{
-                    color: #FFF;
-                    background: $color-darker-gray;
+                    color: $primary-50;
+                    background: $primary-700;
                 }
             }
             .form{
-                background: #000;
-                color: #FFF;
+                background: $primary-900;
+                color: $primary-50;
             }
         }
-        @media(max-width:1295px){
+        @media(max-width: 1295px){
             padding-left: 12px;
             padding-right: 12px;
         }

@@ -2,13 +2,13 @@
     .content{
         row-gap: 80px;
         .title{
-            margin: 0 auto;
-            h1{
-                @include title-text;
+            text-align: center;
+            .title-text{
+                @include title-text-style;
                 margin-bottom: 24px;
             }
             p{
-                color: $color-gray;
+                color: $primary-500;
             }
         }
         .blog-page{
@@ -37,14 +37,14 @@
                                     @include tag;
                                 }
                             }
-                            h2{
-                                color: $color-darker-gray;
+                            h3{
+                                color: $primary-700;
                                 font-size: $font-size-s;
                                 font-weight: $font-weight-semi-bold;
                                 margin-bottom: 16px;
                             }
                             p{
-                                color: $color-darker-gray
+                                color: $primary-700
                             }
                         }
                     }
@@ -53,7 +53,7 @@
         }
         @media (max-width: 992px){
             .title{
-                h1{
+                h2{
                     margin-bottom: 16px;
                 }
             }

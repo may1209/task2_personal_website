@@ -5,7 +5,7 @@
         column-gap: 134px;
         .content-items{
             max-width: 858px;
-            color: $color-darker-gray;
+            color: $primary-700;
             p{
                 font-size: $font-size-s;
                 margin-bottom: 40px;
@@ -16,7 +16,7 @@
                 margin-bottom: 40px;
                 p{
                     font-size: $font-size-xs;
-                    color: $color-gray;
+                    color: $primary-500;
                     margin-bottom: 0;
                 }
             }
@@ -50,7 +50,7 @@
                 text-align: center;
                 p{
                     font-size: $font-size-xs;
-                    color: $color-dark-gray;
+                    color: $primary-600;
                     margin-bottom: 0;
                 }
             }
@@ -67,7 +67,7 @@
                     margin-bottom: 16px;
                     p{
                         font-size: $font-size-xs;
-                        color: $color-gray;
+                        color: $primary-500;
                     }
                     .slash{
                         display: none;
@@ -93,7 +93,7 @@
                     row-gap: 32px;
                     margin-bottom: 32px;
                     p{
-                        color: $color-gray;
+                        color: $primary-500;
                     }
                 }
             }
@@ -103,10 +103,10 @@
         padding: 0 312px 120px;
         .articles{
             padding-top: 80px;
-            border-top: 1px solid $color-light-gray;
+            border-top: 1px solid $primary-400;
             h2{
                 font-size: $font-size-l;
-                color: $color-darker-gray;
+                color: $primary-700;
                 font-weight: bold;
                 margin-bottom: 40px;
             }
@@ -115,7 +115,7 @@
                 column-gap: 24px;
                 a{
                     display: block;
-                    color: $color-darker-gray;
+                    color: $primary-700;
                     max-width: 416px;
                     img{
                         @include article-img;
@@ -138,14 +138,14 @@
                                 @include tag;
                             }
                             .date{
-                                color: $color-dark-gray;
+                                color: $primary-600;
                             }
                         }
                     }
                 }
             }
         }
-        @media(max-width:1295px){
+        @media(max-width: 1295px){
             padding-left: 12px;
             padding-right: 12px;
         }
