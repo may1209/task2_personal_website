@@ -22,6 +22,7 @@
                 text-align: center;
                 z-index: 1;
                 .marked{
+                    padding: 0 8px;
                     position: relative;
                 }
                 .marked::after{
@@ -60,7 +61,7 @@
             text-align: center;
             column-gap: 40px;
             .experience-ex{
-                width: 298px;
+                max-width: 298px;
                 p{
                     color: $primary-700;
                 }
@@ -120,7 +121,6 @@
             justify-content: center;
             column-gap: 16px;
             a{
-                display: block;
                 padding: 2px 13px;
                 color: $primary-700;
                 font-size: $font-size-m;
@@ -135,8 +135,127 @@
                 background: $primary-800;
             }
         }
+        .modal{
+            .modal-content{
+                max-width: 1076px;
+                margin: 0 auto;
+                border-radius: 16px;
+                .modal-header{
+                    padding: 32px 40px 0px 40px;
+                    border-top-left-radius: 16px;
+                    border-top-right-radius: 16px;
+                }
+                .modal-body{
+                    padding: 40px 0;
+                    h1{
+                        color: $primary-700;
+                        font-size: $font-size-l;
+                        font-weight: bold;
+                        text-align: center;
+                        margin-bottom: 8px;
+                    }
+                    .subtitle{
+                        color: $primary-500;
+                        text-align: center;
+                        margin-bottom: 40px;
+                    }
+                    .details{
+                        padding: 0 56px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .introduction{
+                            color: $primary-800;
+                            padding-right: 72px;
+                        }
+                        .base{
+                            color: $primary-600;
+                            padding-left: 24px;
+                            border-left: 1px solid $primary-400;
+                            display: flex;
+                            flex-direction: column;
+                            row-gap: 8px;
+                            br{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .modal-footer{
+                    background: $primary-100;
+                    padding: 80px 0;
+                    border-bottom-right-radius: 16px;
+                    border-bottom-left-radius: 16px;
+                    .display{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        row-gap: 56px;
+                        img{
+                            border-radius: 20px;
+                            margin-bottom: 24px;
+                        }
+                        h2{
+                            color: $primary-800;
+                            font-weight: bold;
+                            font-size: $font-size-m;
+                            text-align: center;
+                            margin-bottom: 16px;
+                        }
+                        p{
+                            color: $primary-600;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
         @media (max-width: 992px){
-            padding: 80px 0;
+            .modal{
+                .modal-content{
+                    .modal-header{
+                        padding: 32px 32px 0 32px;
+                    }
+                    .modal-body{
+                        padding: 24px 0;
+                        h1{
+                            line-height: $line-height-relaxed;
+                        }
+                        .subtitle{
+                            margin-bottom: 24px;
+                        }
+                        .details{
+                            padding: 0 32px;
+                            flex-direction: column;
+                            row-gap: 24px;
+                            .introduction{
+                                padding: 0;
+                            }
+                            .base{
+                                text-align: center;
+                                padding-top: 24px;
+                                padding-left: 0;
+                                border: 0;
+                                border-top: 1px solid $primary-400;
+                                row-gap: 24px;
+                                .base-item{
+                                    display: inline-block;
+                                    margin-bottom: 4px;
+                                }
+                                br{
+                                    display: block;
+                                }
+                                .colon{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                    .main-footer{
+                        padding: 40px 0;
+                    }
+                }
+            }
         }
     }
 }

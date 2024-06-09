@@ -5,6 +5,11 @@
         align-items: center;
         padding: 32px 312px;
         border-bottom: 1px solid $primary-200;
+        position: fixed;
+        top: 0;
+        background: $primary-50;
+        z-index: 5;
+        width: 100%;
         .logo{
             margin-right: 318px;
         }
@@ -14,7 +19,7 @@
                 .menu-open{
                     display: none;
                 }
-                .menu-close {
+                .menu-close{
                     display: inline;
                 }
             }
@@ -22,12 +27,12 @@
                 .menu-open{
                     display: inline;
                 }
-                .menu-close {
+                .menu-close{
                     display: none;
                 }
             }
         }
-        .menu-btn {
+        .menu-btn{
             display: none;
             cursor: pointer;
             height: 40px;
@@ -99,28 +104,58 @@
         .text{
             padding: 0px 16px;
             color: $primary-700;
-            h2{
-                font-size: $font-size-l;
-                font-weight: bold;
-                margin-bottom: 8px;
-            }
+            @include work-page-text-style;
             p{
                 color: $primary-500;
-                margin-bottom: 24px;
             }
-            .tags{
+        }
+    }
+    .services{
+        @include container-title;
+        .service-items{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            .item{
+                background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/service-item-bg.png?raw=true);
+                width: 306px;
+                height: 306px;
+                padding: 20px 30px;
+                border-radius: 16px;
                 display: flex;
-                flex-wrap: wrap;
-                gap: 16px;
-                li{
-                    @include tag;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                row-gap: 16px;
+                p{
+                    color: $primary-50;
+                    font-size: $font-size-l;
+                    font-weight: bold;
                 }
             }
         }
+        @media(max-width: 1320px){
+            padding-left: 312px;
+            padding-right: 312px;
+        }
+        @media(max-width: 1295px){
+            padding-left: 160px;
+            padding-right: 160px;
+        }
         @media (max-width: 992px){
-            .text{
-                h2{
-                    font-size: $font-size-s;
+            padding-top: 40px;
+            padding-left: 0;
+            padding-right: 0;
+            .service-items{
+                flex-direction: column;
+                .item{
+                    max-width: 306px;
+                    width: 100%;
+                    p{
+                        font-size: $font-size-m;
+                    }
                 }
             }
         }

@@ -55,6 +55,9 @@
                 }
             }
         }
+        @media (max-width: 1295px){
+            column-gap: 40px;
+        }
         @media (max-width: 992px){
             padding: 0 12px 40px;
             .sidebar{
@@ -110,38 +113,11 @@
                 font-weight: bold;
                 margin-bottom: 40px;
             }
-            ul{
+            .reference-articles{
                 display: flex;
                 column-gap: 24px;
                 a{
-                    display: block;
-                    color: $primary-700;
-                    max-width: 416px;
-                    img{
-                        @include article-img;
-                        margin-bottom: 16px;
-                    }
-                    .text{
-                        display: flex;
-                        flex-direction: column;
-                        padding: 0 8px;
-                        row-gap: 16px;
-                        h3{
-                            font-size: $font-size-m;
-                            font-weight: bold;
-                        }
-                        .details{
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: center;
-                            .tags{
-                                @include tag;
-                            }
-                            .date{
-                                color: $primary-600;
-                            }
-                        }
-                    }
+                    @include reference-article-style;
                 }
             }
         }
@@ -157,7 +133,7 @@
                     font-size: $font-size-m;
                     text-align: center;
                 }
-                ul{
+                .reference-articles{
                     flex-direction: column;
                     align-items: center;
                     column-gap: 0;
@@ -167,9 +143,6 @@
                             flex-direction: column-reverse;
                             .details{
                                 flex-direction: row-reverse;
-                            }
-                            h3{
-                                font-weight: $font-weight-semi-bold;
                             }
                         }
                     }

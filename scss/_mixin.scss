@@ -59,6 +59,70 @@
     }
 }
 
+@mixin container-title{
+    padding: 120px 0;
+    text-align: center;
+    .title-text{
+        @include title-text-style;
+        margin-bottom: 80px;
+    }
+    @media (max-width: 992px){
+        padding: 80px 0;
+        .title-text{
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@mixin work-page-text-style{
+    h3{
+        font-size: $font-size-l;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+    p{
+        margin-bottom: 24px;
+    }
+    .tags{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        li{
+            @include tag;
+        }
+    }
+    @media (max-width: 992px){
+        h3{
+            font-size: $font-size-s;
+        }
+        .tags{
+            gap: 8px;
+        }
+    }
+}
+
+@mixin more-btn-style{
+    color: $primary-50;
+    background: $primary-900;
+    padding: 16px 32px;
+    border-radius: 5px;
+    font-size: $font-size-s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+    max-width: 176px;
+    margin: 0 auto;
+    &:hover{
+        background: $primary-700;
+    }
+    @media (max-width: 992px){
+        padding: 8px 16px;
+        font-size: $font-size-xs;
+        max-width: 128px;
+    }
+}
+
 @mixin article-img{
     border-radius: 8px;
     border: 1px solid $primary-200;
@@ -72,17 +136,40 @@
     color: $primary-700;
 }
 
-@mixin service-container{
-    padding: 120px 0;
-    text-align: center;
-    .title-text{
-        @include title-text-style;
-        margin-bottom: 80px;
+
+@mixin reference-article-style{
+    color: $primary-700;
+    max-width: 416px;
+    img{
+        @include article-img;
+        margin-bottom: 16px;
+    }
+    .text{
+        display: flex;
+        flex-direction: column;
+        padding: 0 8px;
+        row-gap: 16px;
+        h3{
+            font-size: $font-size-m;
+            font-weight: bold;
+        }
+        .details{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .tags{
+                @include tag;
+            }
+            .date{
+                color: $primary-600;
+            }
+        }
     }
     @media (max-width: 992px){
-        padding: 80px 0;
-        .title-text{
-            margin-bottom: 40px;
+        .text{
+            h3{
+                font-weight: $font-weight-semi-bold;
+            }
         }
     }
 }
